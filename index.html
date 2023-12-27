@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koe - The Kafe</title>
+    <link rel="icon" href="./CSS Files/Images/cafe.png">
+    <link rel="stylesheet" href="./CSS Files/index.css">
+</head>
+<body>
+    
+    <div class="container">
+
+        <!-- Banner Section -->
+        <div class="banner">
+            <p>"Koe - The Kafe" - Where Every Sip Tells a Story.</p>
+        </div>
+
+        <!-- Navigation Bar -->
+        <div class="navigation_bar">
+            <div class="logo">
+                <a href="./index.html"><img src="./CSS Files/Images/cafe.png" alt=""></a>
+                <h2>KOE - The Kafe</h2>
+            </div>
+            <div class="midsection" id="menuItems">
+                <a href="">Home</a>
+                <a href="">About</a>
+                <a href="">Shop</a>
+                <a href="">Menu</a>
+                <a href="">Locations</a>
+            </div>
+
+            <div class="btns">
+                <a href=""><button>Contact Us</button></a>
+            </div>
+
+            <div class="menu-bar" onclick="toggleMenu()">
+                <a href="" onclick="click()"><img src="./CSS Files/Images/menu.png" alt=""></a>
+            </div>
+        </div>
+
+        <!-- Hero Section -->
+    </div>
+
+    <script>
+        function toggleMenu() {
+            var menuItems = document.getElementById("menuItems");
+            if (menuItems.style.display === "block") {
+                menuItems.style.display = "none";
+            } else {
+                menuItems.style.display = "block";
+                menuItems.style.visibility = "visible";
+            }
+        }
+    </script>
+
+</body>
+</html>
