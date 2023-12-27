@@ -12,14 +12,13 @@ body{
     align-items: center;
     flex-direction: column;
     width:100%;
+    position: relative;
 }
 .banner{
     background-color: #FC427B;
     color:white;
     width:100%;
     padding:0.8rem 0;
-    position: fixed;
-    top:0;
 }
 .banner p{
     font-weight:bolder;
@@ -32,9 +31,6 @@ body{
     width:100%;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
     padding:1rem 0;
-    /* position: relative; */
-    position: fixed;
-    top:2rem;
 }
 .logo{
     display:flex;
@@ -83,6 +79,73 @@ body{
 .box{
     height:1000px;
 }
+#heading{
+    margin:2rem 0;
+    text-align: left;
+    animation:slideFromleft 2s 1 ease;
+    transition:2s;
+}
+@keyframes slideFromleft {
+    0%{
+        transform: translateX(-200%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+.hero{
+    display: grid;
+    place-items: center;
+    background-image: url("./Images/Tea.jpg");
+    background-size: 100% 100%;
+    width:90%;
+    height:600px;
+    animation: ImageSlider 20s infinite ease;
+    border-radius:10px;
+}
+@keyframes ImageSlider {
+    0%{
+        background-image: url("./Images/Tea.jpg");
+    }
+    25%{
+        background-image: url("./Images/salad.jpg");
+    }
+    50%{
+        background-image: url("./Images/soups.jpg");
+    }
+    75%{
+        background-image: url("./Images/pastry.jpg");
+    }
+    100%{
+        background-image: url("./Images/Tea.jpg");
+    }
+}
+.hero_sec2{
+    display:flex;
+    width:100%;
+    padding:1rem 2rem;
+    justify-content: center;
+    align-items: center;
+    gap:3rem;
+}
+.hero_sec2 .box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:300px;
+    width:20%;
+    background-color: #fff8f9;
+    transition: 0.3s ease-in-out;
+}
+.hero_sec2 .box img{
+    width:50%;
+}
+.hero_sec2 .box:hover{
+    cursor:pointer;
+    border-bottom: 8px solid #FC427B;
+    transform: scaleX(1);
+}
 @media (max-width:425px){
     .banner{
         font-size:1rem;
@@ -97,5 +160,21 @@ body{
         display:block;
         height:2rem;
         width:100%;
+    }
+    .hero{
+        background-size: 100% 100%;
+        height:400px;
+    }
+    .hero_sec2{
+        flex-wrap: wrap;
+    }
+    .hero_sec2 .box{
+        height:150px;
+        width:40%;
+    }
+    .hero_sec2 .box h3{
+        text-align: center;
+        font-size:1rem;
+        margin-top: 0.4rem;
     }
 }
