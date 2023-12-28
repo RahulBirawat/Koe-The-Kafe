@@ -1,116 +1,229 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Koe - The Kafe</title>
-    <link rel="icon" href="./CSS Files/Images/cafe.png">
-    <link rel="stylesheet" href="./CSS Files/index.css">
-</head>
-<body>
-    
-    <div class="container">
-
-        <!-- Banner Section -->
-        <div class="banner">
-            <p>"Koe - The Kafe" - Where Every Sip Tells a Story.</p>
-        </div>
-
-        <!-- Navigation Bar -->
-        <div class="navigation_bar">
-            <div class="logo">
-                <a href="./index.html"><img src="./CSS Files/Images/cafe.png" alt=""></a>
-                <h2>KOE - The Kafe</h2>
-            </div>
-            <div class="midsection" id="menuItems">
-                <a href="">Home</a>
-                <a href="">About</a>
-                <a href="">Shop</a>
-                <a href="">Menu</a>
-                <a href="">Locations</a>
-            </div>
-
-            <div class="btns">
-                <a href=""><button>Contact Us</button></a>
-            </div>
-
-            <div class="menu-bar" onclick="toggleMenu()">
-                <a href="" onclick="click()"><img src="./CSS Files/Images/menu.png" alt=""></a>
-            </div>
-        </div>
-
-        <h2 id="heading">Get Your Subsciption Now!</h2>
-
-        <!-- Hero Section -->
-        <div class="hero"></div>
-
-        <!-- Hero Section 2 -->
-        <div class="hero_sec2">
-            <div class="box">
-                <img src="./CSS Files/Images/coffee-cup.png" alt="">
-                <h3>Crafted Selections</h3>
-            </div>
-            <div class="box">
-                <img src="./CSS Files/Images/pottery-artist.png" alt="">
-                <h3>Artisanal Creations:</h3>
-            </div>
-            <div class="box">
-                <img src="./CSS Files/Images/active.png" alt="">
-                <h3>Pure Ingredients</h3>
-            </div>
-            <div class="box">
-                <img src="./CSS Files/Images/delivery.png" alt="">
-                <h3>Free Delivery</h3>
-            </div>
-        </div>
-
-        <!-- Footer Section -->
-        <div class="footer">
-            <div class="sec1">
-                <h2>Company</h2>
-                <div class="anchors">
-                    <a href="./about.html">About us</a>
-                    <a href="">Team</a>
-                    <a href="">Careers</a>
-                    <a href="">FAQs</a>
-                </div>
-            </div>
-            <div class="sec2">
-                <h2>Contact</h2>
-                <div class="anchors">
-                    <a href="">Contact us</a>
-                    <a href="">Feedback</a>
-                    <a href="">Help & Support</a>
-                    <a href="">Customer's Reviews</a>
-                </div>
-            </div>
-            <div class="sec3">
-                <h2>Legal</h2>
-                <div class="anchors">
-                    <a href="">Privacy Policy</a>
-                    <a href="">Refund Policy</a>
-                    <a href="">Terms and Conditions</a>
-                    <a href="">Offer Terms</a>
-                </div>
-            </div>
-            <div class="sec4">
-                <a href=""><img src="./CSS Files/Images/google-play.png" alt="">Get it on Google Play</a>
-                <a href=""><img src="./CSS Files/Images/app-store.png" alt="">Get it on Apple Store</a>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        function toggleMenu() {
-            var menuItems = document.getElementById("menuItems");
-            if (menuItems.style.display === "block") {
-                menuItems.style.display = "none";
-            } else {
-                menuItems.style.display = "block";
-                menuItems.style.visibility = "visible";
-            }
-        }
-    </script>
-
-</body>
-</html>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width:100%;
+    position: relative;
+}
+.banner{
+    background-color: #FC427B;
+    color:white;
+    width:100%;
+    padding:0.8rem 0;
+}
+.banner p{
+    font-weight:bolder;
+    text-align: center;
+}
+.navigation_bar{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    width:100%;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    padding:1rem 0;
+}
+.logo{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+}
+.logo img{
+    height:4rem;
+}
+.navigation_bar .midsection{
+    padding:0 4rem;
+}
+.navigation_bar .midsection a{
+    text-decoration: none;
+    font-weight:bolder;
+    color:black;
+    font-size:1.2rem;
+    margin-left:2.4rem;
+    letter-spacing: 0.01rem;
+}
+.btns{
+    display:flex;
+    gap:2rem;
+}
+.navigation_bar .menu-bar{
+    display:none;
+}
+.btns a button{
+    padding:0.7rem 2.4rem;
+    background-color: #FC427B;
+    color:white;
+    font-weight:700;
+    font-size:16px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    word-spacing: 0.1rem;
+}
+.btns a button:hover{
+    background-color: #f8628f;
+}
+.midsection a:hover{
+    color:#FC427B;
+}
+.box{
+    height:1000px;
+}
+#heading{
+    margin:2rem 0;
+    text-align: left;
+    animation:slideFromleft 2s 1 ease;
+    transition:2s;
+}
+@keyframes slideFromleft {
+    0%{
+        transform: translateX(-200%);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+.hero{
+    display: grid;
+    place-items: center;
+    background-image: url("./Images/Tea.jpg");
+    background-size: 100% 100%;
+    width:90%;
+    height:600px;
+    animation: ImageSlider 20s infinite ease;
+    border-radius:10px;
+}
+@keyframes ImageSlider {
+    0%{
+        background-image: url("./Images/Tea.jpg");
+    }
+    25%{
+        background-image: url("./Images/salad.jpg");
+    }
+    50%{
+        background-image: url("./Images/soups.jpg");
+    }
+    75%{
+        background-image: url("./Images/pastry.jpg");
+    }
+    100%{
+        background-image: url("./Images/Tea.jpg");
+    }
+}
+.hero_sec2{
+    display:flex;
+    width:100%;
+    padding:1rem 2rem;
+    justify-content: center;
+    align-items: center;
+    gap:3rem;
+}
+.hero_sec2 .box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height:300px;
+    width:20%;
+    background-color: #fff8f9;
+    transition: 0.3s ease-in-out;
+}
+.hero_sec2 .box img{
+    width:50%;
+}
+.hero_sec2 .box:hover{
+    cursor:pointer;
+    border-bottom: 8px solid #FC427B;
+    transform: scaleX(1);
+}
+.footer,.footer a{
+    background-color: #ebe7dc;
+    color:black;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    gap:4%;
+    padding:4%;
+}
+.footer{
+    width:95%;
+}
+.footer a{
+    text-decoration: none;
+}
+.footer{
+    border:none;
+    border-radius:10px;
+}
+.footer .sec1,.sec2,.sec3,.sec4{
+    display:flex;
+    flex-direction: column;
+    gap:15%;
+    width:25%;
+}
+.footer h2{
+    font-weight:bolder;
+    text-align:center;
+    margin-bottom:20px;
+}
+.footer a:hover{
+    cursor:pointer;
+    text-decoration: underline;
+}
+.sec4 img{
+    width:20%;
+}
+@media (max-width:425px){
+    .banner{
+        font-size:1rem;
+    }
+    .navigation_bar .midsection , .navigation_bar .btns{
+        display:none;
+    }
+    .navigation_bar .menu-bar{
+        display:block;
+    }
+    .navigation_bar .menu-bar img{
+        display:block;
+        height:2rem;
+        width:100%;
+    }
+    .hero{
+        background-size: 100% 100%;
+        height:400px;
+    }
+    .hero_sec2{
+        flex-wrap: wrap;
+    }
+    .hero_sec2 .box{
+        height:150px;
+        width:40%;
+    }
+    .hero_sec2 .box h3{
+        text-align: center;
+        font-size:1rem;
+        margin-top: 0.4rem;
+    }
+    .footer{
+        flex-direction: column;
+        gap:8%;
+    }
+    .footer .sec1,.sec2,.sec3,.sec4{
+        width:100%;
+        margin-top:2rem;
+    }
+    .footer .sec4 img{
+        width:20%;
+    }
+}
