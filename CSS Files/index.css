@@ -147,8 +147,8 @@ body{
     transform: scaleX(1);
 }
 .footer,.footer a{
-    background-color: #FC427B;
-    color:white;
+    background-color: #ebe7dc;
+    color:black;
     width:100%;
     display: flex;
     justify-content: center;
@@ -182,7 +182,7 @@ body{
     text-decoration: underline;
 }
 .sec4 img{
-    width:30%;
+    width:20%;
 }
 @media (max-width:425px){
     .banner{
@@ -224,6 +224,6 @@ body{
         margin-top:2rem;
     }
     .footer .sec4 img{
-        width:30%;
+        width:20%;
     }
 }
