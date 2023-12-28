@@ -914,16 +914,18 @@ video {
     align-items: center;
     height:300px;
     width:20%;
-    background-color: #fff8f9;
+    background-color: #fff;
     transition: 0.3s ease-in-out;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    font-weight:bolder;
 }
 .hero_sec2 .box img{
     width:50%;
 }
 .hero_sec2 .box:hover{
     cursor:pointer;
-    border-bottom: 8px solid #FC427B;
-    transform: scaleX(1);
+    /* border-bottom: 8px solid #FC427B; */
+    transform: scale(1.02);
 }
 .footer,.footer a{
     background-color: #ebe7dc;
