@@ -69,6 +69,63 @@
             </div>
         </div>
 
+        <!-- TestMonial Section -->
+        <div class="testimonials">
+            <div class="headings">
+                <div class="heading-text">
+                    <h2>What Customer Says</h2>
+                    <h1>Recent Reviews</h1>
+                </div>
+                <div class="arrows">
+                    <button onclick="moveLeft()"><img  id="btn1" src="./CSS Files/Images/left-arrow.png" alt=""></button>
+                    <button onclick="moveRight()"><img src="./CSS Files/Images/right-arrow.png" alt=""></button>
+                </div>
+            </div>
+
+            <div class="testboxes">
+                <!-- Box1 -->
+                <div class="testbox" id="box1">
+                    <div class="para">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptates vitae soluta quod natus harum reiciendis eius magni?</p>
+                    </div>
+                    <div class="user-section">
+                            <img src="./CSS Files/Images/testuser.webp" alt="">
+                            <h2>Aniruddh</h2>
+                    </div>
+                </div>
+                <!-- Box2 -->
+                <div class="testbox" id="box2">
+                    <div class="para">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptates vitae soluta quod natus harum reiciendis eius magni?</p>
+                    </div>
+                    <div class="user-section">
+                            <img src="./CSS Files/Images/testuser.webp" alt="">
+                            <h2>Rahul Jain</h2>
+                    </div>
+                </div>
+                <!-- Box3 -->
+                <div class="testbox" id="box3">
+                    <div class="para">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptates vitae soluta quod natus harum reiciendis eius magni?</p>
+                    </div>
+                    <div class="user-section">
+                            <img src="./CSS Files/Images/testuser.webp" alt="">
+                            <h2>Abhinav</h2>
+                    </div>
+                </div>
+                <!-- Box4 -->
+                <div class="testbox" id="box4">
+                    <div class="para">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptates vitae soluta quod natus harum reiciendis eius magni?</p>
+                    </div>
+                    <div class="user-section">
+                            <img src="./CSS Files/Images/testuser.webp" alt="">
+                            <h2>Nikhil</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- Footer Section -->
         <div class="footer">
             <div class="sec1">
@@ -105,6 +162,30 @@
         </div>
     </div>
 
+
+    
+    <script>
+        let currIndex = 0;
+        let test_boxes = document.querySelectorAll(".testboxes .testbox");
+        console.log(test_boxes);
+
+        function moveRight(){
+            test_boxes[currIndex].style.display = "none";
+            currIndex = (currIndex+1) % 4;
+            test_boxes[currIndex].style.display = "block";
+            test_boxes[currIndex].style.transition = "1s";
+        }
+        function moveLeft(){
+            test_boxes[currIndex].style.display = "none";
+            if(currIndex == 0){
+                currIndex = 3;
+            }
+            else{
+                currIndex = (currIndex-1);
+            }
+            test_boxes[currIndex].style.display = "block";
+        }
+    </script>
     
 
 </body>
