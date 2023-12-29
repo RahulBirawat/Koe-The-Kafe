@@ -15,7 +15,7 @@ body{
     position: relative;
 }
 .banner{
-    background-color: #b33939;
+    background-color: #89431f;
     color:white;
     width:100%;
     padding:0.8rem 0;
@@ -1006,5 +1006,133 @@ video {
     }
     .footer .sec4 img{
         width:20%;
+    }
+}
+
+
+.testimonials{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:5rem;
+  padding:5rem;
+  width:100%;
+}
+.testimonials .headings{
+  display:flex;
+  justify-content: center;
+  width:100%;
+  gap:45rem;
+}
+.heading-text h2{
+  color:#89431f;
+  font-size:1.3rem;
+  font-weight:700;
+}
+.heading-text h1{
+  color:#42230f;
+  font-size:2.5rem;
+  font-weight:bolder;
+}
+/* .testimonials button{
+  border:2px solid black;
+} */
+.testimonials .headings .arrows{
+  display:flex;
+  width:20%;
+}
+.testimonials .headings .arrows img{
+  width:60%;
+}
+.testboxes{
+  display:flex;
+  width: 100%;
+  padding:0 10em;
+  transition:1s;
+}
+.testboxes .testbox{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap:2rem;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  width:100%;
+  padding:3rem;
+  transition:1s;
+}
+.para p{
+  font-weight:bolder;
+}
+.user-section{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap:1.4rem;
+}
+.user-section img{
+  height:4rem;
+  border-radius:50%;
+}
+.user-section h2{
+  font-size:1.8rem;
+  font-weight:bolder;
+}
+#box2 , #box3 , #box4{
+  display: none;
+}
+.arrows button img{
+  padding:1rem 1.4rem;
+  border-radius:30px;
+  background-color: bisque;
+  color:white;
+}
+#btn1{
+  background-color: #d1d8e0;
+}
+@media (max-width:425px){
+  .testimonials , .heading-text{
+    width:100%;
+  }
+  .heading-text h2{
+    font-size:1.1rem;
+  }
+  .heading-text h1{
+    font-size:1.7rem;
+  }
+  .testimonials{
+    padding:1.5rem;
+  }
+  .testimonials .headings{
+      display:flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap:2rem;
+      width:100%;
+    }
+    .testimonials .headings .arrows{
+      display:flex;
+      width:50%;
+    }
+    .testboxes{
+      width:100%;
+      padding:0;
+    }
+    .testboxes .testbox{
+      padding:2rem;
+      gap:2rem;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    .testboxes .testbox .para p{
+      width:100%;
+    }
+    .testboxes .testbox .user-section{
+      width:100%;
+    }
+    .arrows button img{
+      padding:1rem;
     }
 }
