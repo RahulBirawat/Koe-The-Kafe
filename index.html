@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,8 +9,9 @@
     <link rel="stylesheet" href="./CSS Files/index.css">
     <script src="./CSS Files/JS Files/navigation.js"></script>
 </head>
+
 <body>
-    
+
     <div class="container">
 
         <!-- Banner Section -->
@@ -19,29 +21,29 @@
 
         <!-- Navigation Bar -->
         <nav id="myNav" class="h-24 w-full bg-[#ebe7dc] px-8 md:px-32 py-2 flex justify-between items-center">
-            <div >
-                <img src="./CSS Files/Images/Logo.jpg" alt="" class="h-20" > 
+            <div>
+                <img src="./CSS Files/Images/Logo.jpg" alt="" class="h-20">
             </div>
             <div class="md:block hidden">
-                <ul class = "flex justify-around items-center font-semibold text-xl">
-                    <li class = "mx-6 cursor-pointer">Home</li>
-                    <li class = "mx-6 cursor-pointer">About</li>
-                    <li class = "mx-6 cursor-pointer">Contact Us</li>
+                <ul class="flex justify-around items-center font-semibold text-xl">
+                    <li class="mx-6 cursor-pointer">Home</li>
+                    <li class="mx-6 cursor-pointer">About</li>
+                    <li class="mx-6 cursor-pointer">Contact Us</li>
                 </ul>
             </div>
-            
+
             <div class="block lg:hidden mr-5 menu" onclick="openNav()">
                 <div class="bar1"></div>
                 <div class="bar2"></div>
                 <div class="bar3"></div>
             </div>
-    
+
             <div id="mySidebar" class="sidebar">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
                 <a href="#">Home</a>
                 <a href="#">About</a>
                 <a href="#">Contact</a>
-              </div>
+            </div>
         </nav>
 
         <h2 id="heading">Get Your Subsciption Now!</h2>
@@ -77,7 +79,7 @@
                     <h1>Recent Reviews</h1>
                 </div>
                 <div class="arrows">
-                    <button onclick="moveLeft()"><img  id="btn1" src="./CSS Files/Images/left-arrow.png" alt=""></button>
+                    <button onclick="moveLeft()"><img id="btn1" src="./CSS Files/Images/left-arrow.png" alt=""></button>
                     <button onclick="moveRight()"><img src="./CSS Files/Images/right-arrow.png" alt=""></button>
                 </div>
             </div>
@@ -86,43 +88,61 @@
                 <!-- Box1 -->
                 <div class="testbox" id="box1">
                     <div class="para">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptates vitae soluta quod natus harum reiciendis eius magni?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptates vitae soluta quod
+                            natus harum reiciendis eius magni?</p>
                     </div>
                     <div class="user-section">
-                            <img src="./CSS Files/Images/testuser.webp" alt="">
-                            <h2>Aniruddh</h2>
+                        <img src="./CSS Files/Images/testuser.webp" alt="">
+                        <h2>Aniruddh</h2>
                     </div>
                 </div>
                 <!-- Box2 -->
                 <div class="testbox" id="box2">
                     <div class="para">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptates vitae soluta quod natus harum reiciendis eius magni?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptates vitae soluta quod
+                            natus harum reiciendis eius magni?</p>
                     </div>
                     <div class="user-section">
-                            <img src="./CSS Files/Images/testuser.webp" alt="">
-                            <h2>Rahul Jain</h2>
+                        <img src="./CSS Files/Images/testuser.webp" alt="">
+                        <h2>Rahul Jain</h2>
                     </div>
                 </div>
                 <!-- Box3 -->
                 <div class="testbox" id="box3">
                     <div class="para">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptates vitae soluta quod natus harum reiciendis eius magni?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptates vitae soluta quod
+                            natus harum reiciendis eius magni?</p>
                     </div>
                     <div class="user-section">
-                            <img src="./CSS Files/Images/testuser.webp" alt="">
-                            <h2>Abhinav</h2>
+                        <img src="./CSS Files/Images/testuser.webp" alt="">
+                        <h2>Abhinav</h2>
                     </div>
                 </div>
                 <!-- Box4 -->
                 <div class="testbox" id="box4">
                     <div class="para">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptates vitae soluta quod natus harum reiciendis eius magni?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptates vitae soluta quod
+                            natus harum reiciendis eius magni?</p>
                     </div>
                     <div class="user-section">
-                            <img src="./CSS Files/Images/testuser.webp" alt="">
-                            <h2>Nikhil</h2>
+                        <img src="./CSS Files/Images/testuser.webp" alt="">
+                        <h2>Nikhil</h2>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <!-- WorkShop Section -->
+
+        <div class="workshop">
+            <div class="work_image">
+                <img src="./CSS Files/Images/Screenshot (343).png" alt="">
+            </div>
+            <div class="text_section">
+                <h2>Join the workshop of Coffee Roasting</h2>
+                <h1>WorkShop Starts in: </h1>
+                <p id="timer"></p>
+                <button>Register Now</button>
             </div>
         </div>
 
@@ -163,30 +183,54 @@
     </div>
 
 
-    
+
     <script>
         let currIndex = 0;
         let test_boxes = document.querySelectorAll(".testboxes .testbox");
         console.log(test_boxes);
 
-        function moveRight(){
+        function moveRight() {
             test_boxes[currIndex].style.display = "none";
-            currIndex = (currIndex+1) % 4;
+            currIndex = (currIndex + 1) % 4;
             test_boxes[currIndex].style.display = "block";
             test_boxes[currIndex].style.transition = "1s";
         }
-        function moveLeft(){
+        function moveLeft() {
             test_boxes[currIndex].style.display = "none";
-            if(currIndex == 0){
+            if (currIndex == 0) {
                 currIndex = 3;
             }
-            else{
-                currIndex = (currIndex-1);
+            else {
+                currIndex = (currIndex - 1);
             }
             test_boxes[currIndex].style.display = "block";
         }
+
+
+
+        let para = document.querySelector("#timer");
+        let x = setInterval(function () {
+            let dest_date = new Date("jan 16,2024 12:00:00").getTime();
+            let today_date = new Date().getTime();
+
+            let diff = dest_date - today_date;
+
+
+            let days = Math.floor(diff / (1000 * 86400));
+
+            let hours = Math.floor((diff % (1000 * 86400)) / (1000 * 60 * 60));
+
+            let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+            let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            para.innerHTML = days + " Days " + hours + " Hrs " + minutes + " Min  " + seconds + " Sec ";
+
+        }, 1000);
+
     </script>
-    
+
 
 </body>
+
 </html>
