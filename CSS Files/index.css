@@ -1197,7 +1197,7 @@ video {
     flex-direction: column;
     gap:3rem;
   }
-  .work_image , .work_image {
+  .work_image , .work_image video{
     width:100%;
     padding:0;
     height:300px;
