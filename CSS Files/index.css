@@ -1235,6 +1235,7 @@ video {
 @media (max-width:425px){
   .preloader{
     background-size: 30%;
+      width:100%;
   }
 }
 
