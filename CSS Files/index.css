@@ -1062,7 +1062,6 @@ video {
   width:100%;
   padding:3rem;
   transition:1s;
-  z-index:100;
 }
 .para p{
   font-weight:bolder;
@@ -1221,5 +1220,22 @@ video {
   }
   .text_section button{
     padding:0.3rem 0;
+  }
+}
+
+.preloader{
+  background:  #fff url("./Images/giphy.gif") no-repeat center center;
+  background-size: 20%;
+  height:100vh;
+  width:100%;
+  position: fixed;
+  z-index:100;
+}
+
+@media (max-width:425px){
+  .preloader{
+    background-size: 30%;
+    right:2rem;
+    top:-2rem;
   }
 }
