@@ -5,6 +5,7 @@
 }
 body{
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    background-image: url("./Images/asset\ 1.jpeg");
 }
 .container{
     display:flex;
@@ -1057,10 +1058,11 @@ video {
   align-items: center;
   flex-direction: column;
   gap:2rem;
-  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  box-shadow: rgba(50, 51, 51, 0.2) 0px 8px 24px;
   width:100%;
   padding:3rem;
   transition:1s;
+  z-index:100;
 }
 .para p{
   font-weight:bolder;
@@ -1144,6 +1146,7 @@ video {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   padding:5rem 4rem;
   margin-bottom: 7rem;;
+  z-index: 2;
 }
 .work_image{
   width:45%;
