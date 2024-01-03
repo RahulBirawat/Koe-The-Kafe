@@ -7,12 +7,25 @@
     <title>Koe - The Kafe</title>
     <link rel="icon" href="./CSS Files/Images/cafe.png">
     <link rel="stylesheet" href="./CSS Files/index.css">
+    <link rel="stylesheet" href="./CSS Files/footerStyle.css">
+    <link rel="stylesheet" href="./styles/InstaStyle.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="./CSS Files/swiper-bundle.min.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./CSS Files/testostyle.css" />
+    <!-- googleFonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Sevillana&display=swap" rel="stylesheet">
+
+
     <script src="./CSS Files/JS Files/navigation.js"></script>
 </head>
 
 <body>
 
-    <div class="preloader"></div>
+    <div class="preloader" ></div>
 
     <div class="container">
 
@@ -22,14 +35,14 @@
         </div>
 
         <!-- Navigation Bar -->
-        <nav id="myNav" class="h-24 w-full bg-[#ebe7dc] px-8 md:px-32 py-2 flex justify-between items-center">
+        <nav id="myNav" class="h-24 w-full bg-[#ebe7dc] px-8 md:px-32 py-2 flex justify-between items-center" style="position: sticky;top:0px;z-index: 500;">
             <div>
                 <img src="./CSS Files/Images/Logo.jpg" alt="" class="h-20">
             </div>
             <div class="md:block hidden">
                 <ul class="flex justify-around items-center font-semibold text-xl">
-                    <li class="mx-6 cursor-pointer">Home</li>
-                    <li class="mx-6 cursor-pointer">About</li>
+                    <li class="mx-6 cursor-pointer"> <a href="index.html"> Home</a></li>
+                    <li class="mx-6 cursor-pointer"> <a href="about.html"> About</a></li>
                     <li class="mx-6 cursor-pointer">Contact Us</li>
                 </ul>
             </div>
@@ -40,10 +53,10 @@
                 <div class="bar3"></div>
             </div>
 
-            <div id="mySidebar" class="sidebar">
+            <div id="mySidebar" class="sidebar" style="z-index: 100;">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                <a href="#">Home</a>
-                <a href="#">About</a>
+                <a href="index.html">Home</a> 
+                <a href="about.html">About</a>
                 <a href="#">Contact</a>
             </div>
         </nav>
@@ -73,123 +86,217 @@
             </div>
         </div>
 
-        <!-- TestMonial Section -->
-        <div class="testimonials">
-            <div class="headings">
-                <div class="heading-text">
-                    <h2>What Customer Says</h2>
-                    <h1>Recent Reviews</h1>
-                </div>
-                <div class="arrows">
-                    <button onclick="moveLeft()"><img id="btn1" src="./CSS Files/Images/left-arrow.png" alt=""></button>
-                    <button onclick="moveRight()"><img src="./CSS Files/Images/right-arrow.png" alt=""></button>
-                </div>
-            </div>
-
-            <div class="testboxes">
-                <!-- Box1 -->
-                <div class="testbox" id="box1">
-                    <div class="para">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptates vitae soluta quod
-                            natus harum reiciendis eius magni?</p>
-                    </div>
-                    <div class="user-section">
-                        <img src="./CSS Files/Images/testuser.webp" alt="">
-                        <h2>Aniruddh</h2>
-                    </div>
-                </div>
-                <!-- Box2 -->
-                <div class="testbox" id="box2">
-                    <div class="para">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptates vitae soluta quod
-                            natus harum reiciendis eius magni?</p>
-                    </div>
-                    <div class="user-section">
-                        <img src="./CSS Files/Images/testuser.webp" alt="">
-                        <h2>Rahul Jain</h2>
-                    </div>
-                </div>
-                <!-- Box3 -->
-                <div class="testbox" id="box3">
-                    <div class="para">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptates vitae soluta quod
-                            natus harum reiciendis eius magni?</p>
-                    </div>
-                    <div class="user-section">
-                        <img src="./CSS Files/Images/testuser.webp" alt="">
-                        <h2>Abhinav</h2>
-                    </div>
-                </div>
-                <!-- Box4 -->
-                <div class="testbox" id="box4">
-                    <div class="para">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptates vitae soluta quod
-                            natus harum reiciendis eius magni?</p>
-                    </div>
-                    <div class="user-section">
-                        <img src="./CSS Files/Images/testuser.webp" alt="">
-                        <h2>Nikhil</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- WorkShop Section -->
 
         <div class="workshop">
             <div class="work_image">
                 <!-- <img src="./CSS Files/Images/Screenshot (343).png" alt=""> -->
-                <video src="./CSS Files/Images/WhatsApp Video 2023-12-29 at 20.25.29.mp4" controls></video>
+                <video muted loop autoplay>
+                    <source src="./CSS Files/Images/WhatsApp Video 2023-12-29 at 20.25.29.mp4" type="video/mp4">
+                </video>
             </div>
             <div class="text_section">
                 <h2>Join the workshop of Coffee Roasting</h2>
                 <h1>WorkShop Starts in: </h1>
-                <p id="timer"></p>
+                <div id="timer">
+                    <div  class="timeBox">
+                        <div id="day"></div>
+                        <div>Days</div>
+                    </div>
+                    <div  class="timeBox">
+                        <div id="hour"></div>
+                        <div>Hours</div>
+                    </div>
+                    <div  class="timeBox">
+                        <div id="min"></div>
+                        <div>Mins</div>
+                    </div>
+                    <div class="timeBox">
+                        <div id="sec"></div>
+                        <div>Secs</div>
+                    </div>
+                </div>
                 <button>Register Now</button>
             </div>
         </div>
 
-        <!-- Footer Section -->
-        <div class="footer">
-            <div class="sec1">
-                <h2>Company</h2>
-                <div class="anchors">
-                    <a href="./about.html">About us</a>
-                    <a href="">Team</a>
-                    <a href="">Careers</a>
-                    <a href="">FAQs</a>
+        <!-- Insta Section -->
+        <div id="insta" class="bg-white p-10">
+          <div id="instaProfile" class=" py-5 flex flex-wrap flex-row justify-center items-center gap-x-12 gap-y-5">
+            <div>
+              <a href="https://www.instagram.com/koethekafe/">
+                <div class="h-16 w-16 flex justify-center items-center rounded-full" style="background: linear-gradient(40deg,#f99b4a 15%,#dd3071 50%,#c72e8d 85%);">
+                  <img src="./Assets/instaProfile.jpg" alt="" class="h-[60px] w-[60px] rounded-full" >
                 </div>
+              </a>
             </div>
-            <div class="sec2">
-                <h2>Contact</h2>
-                <div class="anchors">
-                    <a href="">Contact us</a>
-                    <a href="">Feedback</a>
-                    <a href="">Help & Support</a>
-                    <a href="">Customer's Reviews</a>
+            
+            <div class="flex justify-center items-start flex-col">
+              <h1 class="font-bold text-lg leading-3 mb-3">KOE - The Kafe</h1>
+              <div class="text-base text-gray-500 leading-3">@koethekafe</div>
+            </div>
+  
+            <div>
+              <a href="https://www.instagram.com/koethekafe/" style="text-decoration: none;">
+                <div class="md:ml-10 flex gap-4 justify-center items-center py-1 px-2 rounded-lg" style="background: linear-gradient(40deg,#f99b4a 15%,#dd3071 50%,#c72e8d 85%);">
+                  <img src="./Assets/instagramLogo.png" alt="" class="h-4 w-4">
+                  <div class="text-white">Follow</div>
                 </div>
+              </a>
             </div>
-            <div class="sec3">
-                <h2>Legal</h2>
-                <div class="anchors">
-                    <a href="">Privacy Policy</a>
-                    <a href="">Refund Policy</a>
-                    <a href="">Terms and Conditions</a>
-                    <a href="">Offer Terms</a>
+            
+  
+          </div>
+  
+          <div id="instaPosts" class="flex flex-wrap justify-center items-center">
+              <div class="flex flex-row">
+                <div class="hoverBg">
+                  <a href="https://www.instagram.com/reel/C1ACBzPNaZ8/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+                    <div class="instaPic" style="background-image: url('./Assets/instaPost1.jpg');"></div>
+                  </a>
                 </div>
-            </div>
-            <div class="sec4">
-                <a href=""><img src="./CSS Files/Images/google-play.png" alt="">Get it on Google Play</a>
-                <a href=""><img src="./CSS Files/Images/app-store.png" alt="">Get it on Apple Store</a>
-            </div>
+                <div>
+                  <a href="https://www.instagram.com/reel/C1OY3c_NB4Y/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+                    <div class="instaPic" style="background-image: url('./Assets/instaPost2.jpg');"></div>
+                  </a>
+                </div>
+              </div>
+              <div class="flex flex-row">
+                <div>
+                  <a href="https://www.instagram.com/p/Cz6Y0qvNjOz/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+                    <div class="instaPic" style="background-image: url('./Assets/instaPost3.jpg');"></div>
+                  </a>
+                </div>
+                <div>
+                  <a href="https://www.instagram.com/reel/Cx88s02NcDc/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+                    <div class="instaPic" style="background-image: url('./Assets/instaPost4.jpg');"></div>
+                  </a>
+                </div>
+              </div>
+          </div>
         </div>
 
 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/GCPMx3L6zHE?si=cCtu7iC-MrOxNQ2_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <!-- TestMonial Section -->
+        <div class="testimonial" >
+            <section class="Ccontainer">
+                <div class="testimonial mySwiper">
+                  <div class="testi-content swiper-wrapper">
+                    <div class="slide swiper-slide">
+                      <img src="./Assets/img1.jpg" alt="" class="image" />
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
+                        saepe provident dolorem a quaerat quo error facere nihil deleniti
+                        eligendi ipsum adipisci, fugit, architecto amet asperiores
+                        doloremque deserunt eum nemo.
+                      </p>
+          
+                      <i class="bx bxs-quote-alt-left quote-icon"></i>
+          
+                      <div class="details">
+                        <span class="name">Marnie Lotter</span>
+                        <span class="job">Web Developer</span>
+                      </div>
+                    </div>
+                    <div class="slide swiper-slide">
+                      <img src="./Assets/img2.jpg" alt="" class="image" />
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
+                        saepe provident dolorem a quaerat quo error facere nihil deleniti
+                        eligendi ipsum adipisci, fugit, architecto amet asperiores
+                        doloremque deserunt eum nemo.
+                      </p>
+          
+                      <i class="bx bxs-quote-alt-left quote-icon"></i>
+          
+                      <div class="details">
+                        <span class="name">Marnie Lotter</span>
+                        <span class="job">Web Developer</span>
+                      </div>
+                    </div>
+                    <div class="slide swiper-slide">
+                      <img src="./Assets/img3.jpg" alt="" class="image" />
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
+                        saepe provident dolorem a quaerat quo error facere nihil deleniti
+                        eligendi ipsum adipisci, fugit, architecto amet asperiores
+                        doloremque deserunt eum nemo.
+                      </p>
+          
+                      <i class="bx bxs-quote-alt-left quote-icon"></i>
+          
+                      <div class="details">
+                        <span class="name">Marnie Lotter</span>
+                        <span class="job">Web Developer</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-button-next nav-btn"></div>
+                  <div class="swiper-button-prev nav-btn"></div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </section>
+          
+        </div>
+        <!-- Footer Section -->
+        <div class="bg-[#f4f1ea] mt-32 mx-0 mb-0 px-10 py-16 flex flex-wrap justify-between items-center gap-10">
+            <div class="w-64">
+              <h1 class="font-bold text-lg">
+                KOE - The Kafe
+                <br><br>
+              </h1>
+              <p class="text-gray-600">
+                <span class="font-semibold text-gray-800">Cafe Locations:</span> <br>
+                205, International Finance Centre, VIP Road, opp. Fire Station, Vesu, Surat, Gujarat 395007
+              </p>
+              <br>
+              <h1 class="font-semibold text-gray-800">
+                Cafe Timings:
+              </h1>
+              <p class="text-gray-600">
+                12 pm–12:30 am
+              </p>
+            </div>
+      
+      
+            <div class="w-64 flex flex-col gap-3 text-gray-700">
+              
+                <p class="font-bold text-xl mb-2">Quick Links</p>
+                <p>Home</p>
+                <p>Menu</p>
+                <p>About Us</p>
+                <p>Instagram</p>
+              
+            </div>
+      
+            <div class="w-64 flex flex-col gap-3 text-gray-700">
+              
+                <p class="font-bold text-xl mb-2">Contact</p>
+                <p>Contact Us</p>
+                <p>Feedback</p>
+                <p>Customer Reviews</p>
+                <p>Locations</p>
+              
+            </div>
+            
+            <div class="map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.2761322759548!2d72.77937191178164!3d21.141406513462726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be05327ccb9c45f%3A0xe73ce99228e97293!2sKOE%20-%20The%20Kafe!5e0!3m2!1sen!2sin!4v1703932462882!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded-lg w-[250px] h-[224px] md:w-[350px] md:h-[300px]"></iframe>
+            </div>
+          </div>
+        
+        <a href="https://bit.ly/KoeTheKafeMenu" target="_blank" style="text-decoration: none;" class="text-[#42230f] font-bold text-3xl hover:text-[#4e3c1e] ">
+            <div id="menu" class="fixed bottom-5 right-5 px-4 py-3 bg-[#ebe7dc] hover:bg-[#e4e1d8] rounded-3xl md:rounded-lg flex justify-between items-center gap-5" style="font-family: 'Poppins', sans-serif;font-family: 'Sevillana', cursive;z-index: 1000;">
+              <img src="./Assets/menu.png" alt="" class="h-10 w-10">
+              <div class="hidden md:block"> Menu </div>
+            </div>
+            </a>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/GCPMx3L6zHE?si=cCtu7iC-MrOxNQ2_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen id="hiddenIframe"></iframe>
         
     </div>
 
-
+    <script src="./Scripts/swiper-bundle.min.js"></script>
+    <script src="./Scripts/testoscript.js"></script>
 
     <script>
         let currIndex = 0;
@@ -221,7 +328,10 @@
             let today_date = new Date().getTime();
 
             let diff = dest_date - today_date;
-
+            let d=document.getElementById("day");
+            let h=document.getElementById("hour");
+            let m=document.getElementById("min");
+            let s=document.getElementById("sec");
 
             let days = Math.floor(diff / (1000 * 86400));
 
@@ -230,8 +340,12 @@
             let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
 
             let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            d.innerHTML = days;
+            h.innerHTML = hours;
+            m.innerHTML = minutes;
+            s.innerHTML = seconds;
 
-            para.innerHTML = days + " Days " + hours + " Hrs " + minutes + " Min  " + seconds + " Sec ";
+            // para.innerHTML = days + " Days " + hours + " Hrs " + minutes + " Min  " + seconds + " Sec ";
 
         }, 1000);
 
