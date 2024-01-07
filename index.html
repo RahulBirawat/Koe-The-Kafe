@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="./CSS Files/index.css">
     <link rel="stylesheet" href="./CSS Files/footerStyle.css">
     <link rel="stylesheet" href="./styles/InstaStyle.css">
+    <link rel="stylesheet" href="./styles/modalStyles.css">
     <!-- Swiper CSS -->
     <link rel="stylesheet" href="./CSS Files/swiper-bundle.min.css" />
 
@@ -119,6 +120,204 @@
                 <button>Register Now</button>
             </div>
         </div>
+        
+        <!-- Specialities Section -->
+        <div >
+            
+          <h1 class="text-center font-medium pt-3 text-6xl " style="font-family: 'Poppins', sans-serif;font-family: 'Sevillana', cursive;margin-bottom: 40px;">A few of our Favourites...</h1>
+         <div class="flex justify-around items-center flex-row flex-wrap mt-5 mx-24" style="gap:48px">
+            
+            <div>
+              
+              <div class="bread h-72 w-72 md:h-80 md:w-80 bg-slate-200 rounded-full flex justify-center items-center">
+                <img src="./Assets/bread1.png" alt="bread" class="h-64 hover:h-72 md:h-72 md:hover:h-80" style="transition: all 400ms; border-radius: 100%;">
+              </div>
+              <h1 class="text-center pt-3" style="font-family: 'Poppins', sans-serif;font-family: 'Sevillana', cursive;font-size: 36px;">Breads</h1>
+            </div>
+            <div>
+              <div class="cheese h-72 w-72 md:h-80 md:w-80 bg-slate-200 rounded-full flex justify-center items-center">
+                <img src="./Assets/cheese.jpg" alt="mocktail" class="h-64 hover:h-72 md:h-72 md:hover:h-80 " style="transition: all 400ms; border-radius: 100%;">
+              </div>
+              <h1 class="text-center pt-3" style="font-family: 'Poppins', sans-serif;font-family: 'Sevillana', cursive;font-size: 36px;">Cheese</h1>
+            </div>
+            <div>
+              <div class="coffee h-72 w-72 md:h-80 md:w-80 bg-orange-100 rounded-full flex justify-center items-center">
+                <img src="./Assets/coffeeImg.png" alt="bread" class="h-52 hover:h-60  md:h-60 md:hover:h-64" style="transition: all 400ms;">
+              </div>
+              <h1 class="text-center  pt-3" style="font-family: 'Poppins', sans-serif;font-family: 'Sevillana', cursive;font-size: 36px;">Coffee</h1>
+            </div> 
+         </div>
+         
+
+        </div>
+
+        <dialog  id="modal1" class="modal relative " style="color: antiquewhite; background-image: linear-gradient(rgba(0, 0, 0, 0.658),rgba(46, 31, 0, 0.764)),url('./Assets/breadbg.jpg');">
+          <h1 class="text-center" style="font-family: 'Poppins', sans-serif;font-family: 'Sevillana', cursive;font-weight: 500;font-size: 3.25rem;line-height: 3rem;">Breads</h1>
+          <div class="closeModal1 " style="cursor: pointer;position: absolute; top:30px ; right: 30px;"> &#10006;</div>
+          <br>
+          <div>
+            <p>
+              <b> Sourdough: </b> <br>
+              Fermented with naturally occurring wild yeast.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Baguette: </b> <br>
+              A long, thin French bread with a crispy crust.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Ciabatta: </b> <br>
+              An Italian bread known for its chewy texture and porous interior.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Focaccia: </b> <br>
+              An Italian flatbread often topped with herbs and olive oil.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Whole Wheat: </b> <br>
+              Made with whole wheat flour, offering a nuttier taste and more nutrients.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Brioche: </b> <br>
+              A rich, sweet bread enriched with butter
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> croissants : </b> <br>
+              Croissants are a flaky and buttery French pastry. They're made by layering butter and dough, then folding and rolling several times to create a delicate, crescent-shaped pastry.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Pita: </b> <br>
+              A round, pocketed flatbread, common in Middle Eastern cuisine.
+            </p>
+          </div>
+        </dialog> 
+       
+        <dialog  id="modal2" class="modal relative " style="color: antiquewhite; background-image: linear-gradient(rgba(0, 0, 0, 0.558),rgba(46, 31, 0, 0.764)),url('./Assets/cheeseBg.jpg');">
+          <h1 class="text-center" style="font-family: 'Poppins', sans-serif;font-family: 'Sevillana', cursive;font-weight: 500;font-size: 3.25rem;line-height: 3rem;">Cheeses</h1>
+          <p class="closeModal2 " style="cursor: pointer;position: absolute; top:30px ; right: 30px;"> &#10006;</p>
+          <div>
+            <p>
+              <b> Baby Burrata: </b> <br>
+              A small, fresh Italian cheese made from mozzarella and cream. It has a soft, creamy center encased in a delicate outer shell.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Cherry Broccolini: </b> <br>
+              While "Cherry Broccolini" is not a standard cheese, if you meant a specific cheese related to cherry and broccolini flavors, it might be a unique or local variation.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Buffalo Mozzarella: </b> <br>
+              A soft, moist Italian cheese made from buffalo milk. It has a delicate, milky flavor and is often used in salads or paired with tomatoes.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Cheddar: </b> <br>
+              A firm, smooth-textured cheese originating from England. Cheddar ranges from mild to sharp in flavor, with a distinct tanginess.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Mozzarella: </b> <br>
+              A mild, white cheese known for its soft texture and excellent melting properties. It's often used in pizzas, salads, and Italian dishes.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Mascarpone: </b> <br>
+              An Italian cream cheese with a velvety texture. It's sweet and buttery, commonly used in desserts like tiramisu.
+    
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Parmesan : </b> <br>
+              A hard, aged Italian cheese with a granular texture and rich, savory flavor. Often grated and used to enhance the taste of various dishes.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Feta: </b> <br>
+              A crumbly Greek cheese made from sheep's or goat's milk. It has a tangy flavor and is often used in salads and Mediterranean cuisine.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Ricotta: </b> <br>
+              An Italian whey cheese with a smooth, slightly grainy texture. It's versatile, used in both sweet and savory.
+            </p>
+          </div>
+        </dialog> 
+       
+        <dialog  id="modal3" class="modal relative " style="color: antiquewhite; background-image: linear-gradient(rgba(0, 0, 0, 0.696),rgba(46, 31, 0, 0.836)),url('./Assets/coffeebg1.jpg');background-size: cover;">
+          <h1 class="text-center" style="font-family: 'Poppins', sans-serif;font-family: 'Sevillana', cursive;font-weight: 500;font-size: 3.25rem;line-height: 3rem;">Coffee</h1>
+          <p class="closeModal3 " style="cursor: pointer;position: absolute; top:30px ; right: 30px;"> &#10006;</p>
+          <div>
+            <p>
+              <b> Espresso Italiano: </b> <br>
+              Strong and concentrated coffee brewed by forcing hot water through finely-ground coffee beans.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Espresso Americano: </b> <br>
+              Diluted espresso with added hot water for a milder flavor, resembling regular drip coffee.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Cappuccino </b> <br>
+              Equal parts espresso, steamed milk, and milk foam, creating a creamy and frothy coffee beverage.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Macchiato: </b> <br>
+              Espresso "stained" with a small amount of milk, resulting in a bolder coffee flavor.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Iced Aeropress: </b> <br>
+              Coffee brewed using the Aeropress method and served over ice for a cold and smooth taste.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Classic Cold Brew: </b> <br>
+              Coffee brewed with cold water over an extended period, resulting in a smooth and less acidic flavor.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Caramel Iced Latte : </b> <br>
+              Espresso mixed with milk, ice, and caramel syrup, offering a sweet and creamy iced coffee.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Swiss Mocha Frappe: </b> <br>
+              Blended beverage featuring mocha-flavored coffee, milk, ice, and sometimes whipped cream, for a satisfying frozen treat.
+            </p>
+          </div>
+          
+        </dialog> 
 
         <!-- Insta Section -->
         <div id="insta" class="bg-white p-10">
@@ -178,6 +377,7 @@
 
 
         <!-- TestMonial Section -->
+        <h1 class="text-center font-medium pt-3 text-6xl " style="font-family: 'Poppins', sans-serif;font-family: 'Sevillana', cursive;">Customer Testimonials</h1>
         <div class="testimonial" >
             <section class="Ccontainer">
                 <div class="testimonial mySwiper">
@@ -239,7 +439,7 @@
           
         </div>
         <!-- Footer Section -->
-        <div class="bg-[#f4f1ea] mt-32 mx-0 mb-0 px-10 py-16 flex flex-wrap justify-between items-center gap-10">
+        <div class="bg-[#f4f1ea] mt-16 mx-0 mb-0 px-10 py-16 flex flex-wrap justify-between items-center gap-10">
             <div class="w-64">
               <h1 class="font-bold text-lg">
                 KOE - The Kafe
@@ -297,7 +497,7 @@
 
     <script src="./Scripts/swiper-bundle.min.js"></script>
     <script src="./Scripts/testoscript.js"></script>
-
+    <script src="./Scripts/modalScripts.js"></script>
     <script>
         let currIndex = 0;
         let test_boxes = document.querySelectorAll(".testboxes .testbox");

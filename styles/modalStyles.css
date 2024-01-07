@@ -522,16 +522,58 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
-.mb-2 {
-  margin-bottom: 0.5rem;
+.fixed {
+  position: fixed;
 }
 
-.mb-3 {
-  margin-bottom: 0.75rem;
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.bottom-5 {
+  bottom: 1.25rem;
+}
+
+.right-5 {
+  right: 1.25rem;
+}
+
+.right-3 {
+  right: 0.75rem;
+}
+
+.top-3 {
+  top: 0.75rem;
+}
+
+.mx-0 {
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.mx-24 {
+  margin-left: 6rem;
+  margin-right: 6rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
 }
 
 .flex {
   display: flex;
+}
+
+.hidden {
+  display: none;
+}
+
+.h-10 {
+  height: 2.5rem;
 }
 
 .h-16 {
@@ -542,8 +584,24 @@ video {
   height: 1rem;
 }
 
+.h-52 {
+  height: 13rem;
+}
+
+.h-64 {
+  height: 16rem;
+}
+
+.h-72 {
+  height: 18rem;
+}
+
 .h-\[60px\] {
   height: 60px;
+}
+
+.w-10 {
+  width: 2.5rem;
 }
 
 .w-16 {
@@ -554,8 +612,16 @@ video {
   width: 1rem;
 }
 
+.w-72 {
+  width: 18rem;
+}
+
 .w-\[60px\] {
   width: 60px;
+}
+
+.w-full {
+  width: 100%;
 }
 
 .flex-row {
@@ -582,8 +648,20 @@ video {
   justify-content: center;
 }
 
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
 .gap-4 {
   gap: 1rem;
+}
+
+.gap-5 {
+  gap: 1.25rem;
 }
 
 .gap-x-12 {
@@ -595,6 +673,10 @@ video {
   row-gap: 1.25rem;
 }
 
+.rounded-3xl {
+  border-radius: 1.5rem;
+}
+
 .rounded-full {
   border-radius: 9999px;
 }
@@ -603,13 +685,45 @@ video {
   border-radius: 0.5rem;
 }
 
+.bg-\[\#ebe7dc\] {
+  --tw-bg-opacity: 1;
+  background-color: rgb(235 231 220 / var(--tw-bg-opacity));
+}
+
+.bg-orange-100 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 237 213 / var(--tw-bg-opacity));
+}
+
+.bg-slate-200 {
+  --tw-bg-opacity: 1;
+  background-color: rgb(226 232 240 / var(--tw-bg-opacity));
+}
+
 .bg-white {
   --tw-bg-opacity: 1;
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
+.bg-cover {
+  background-size: cover;
+}
+
+.bg-repeat {
+  background-repeat: repeat;
+}
+
+.p-0 {
+  padding: 0px;
+}
+
 .p-10 {
   padding: 2.5rem;
+}
+
+.px-0 {
+  padding-left: 0px;
+  padding-right: 0px;
 }
 
 .px-2 {
@@ -617,14 +731,46 @@ video {
   padding-right: 0.5rem;
 }
 
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
 }
 
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
+}
+
+.pt-3 {
+  padding-top: 0.75rem;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.font-serif {
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+}
+
+.text-3xl {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
 }
 
 .text-base {
@@ -637,16 +783,26 @@ video {
   line-height: 1.75rem;
 }
 
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
 .font-bold {
   font-weight: 700;
+}
+
+.font-medium {
+  font-weight: 500;
 }
 
 .leading-3 {
   line-height: .75rem;
 }
 
-.leading-5 {
-  line-height: 1.25rem;
+.text-\[\#42230f\] {
+  --tw-text-opacity: 1;
+  color: rgb(66 35 15 / var(--tw-text-opacity));
 }
 
 .text-gray-500 {
@@ -666,32 +822,59 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 150ms;
 }
-#insta{
-  margin: 48px 0 ;
+
+.hover\:h-60:hover {
+  height: 15rem;
 }
 
-.instaPic{
-    width:250px;
-    height:250px;
-    background-size: cover;
-    margin:5px;
-    border-radius: 2px;
-    transition: all 150ms ease-in;
-  }
-  .instaPic:hover{
-    scale: 1.1;
-    
-  }
-  
-  @media(max-width: 524px){
-    .instaPic{
-      width:165px;
-      height:165px;
-      margin:3px;
-    }
-  }
+.hover\:h-72:hover {
+  height: 18rem;
+}
+
+.hover\:bg-\[\#e4e1d8\]:hover {
+  --tw-bg-opacity: 1;
+  background-color: rgb(228 225 216 / var(--tw-bg-opacity));
+}
+
+.hover\:text-\[\#4e3c1e\]:hover {
+  --tw-text-opacity: 1;
+  color: rgb(78 60 30 / var(--tw-text-opacity));
+}
+
 @media (min-width: 768px) {
   .md\:ml-10 {
     margin-left: 2.5rem;
+  }
+
+  .md\:block {
+    display: block;
+  }
+
+  .md\:h-60 {
+    height: 15rem;
+  }
+
+  .md\:h-72 {
+    height: 18rem;
+  }
+
+  .md\:h-80 {
+    height: 20rem;
+  }
+
+  .md\:w-80 {
+    width: 20rem;
+  }
+
+  .md\:rounded-lg {
+    border-radius: 0.5rem;
+  }
+
+  .md\:hover\:h-64:hover {
+    height: 16rem;
+  }
+
+  .md\:hover\:h-80:hover {
+    height: 20rem;
   }
 }
