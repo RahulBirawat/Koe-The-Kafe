@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./styles/ContactStyle1.css">
+    <link rel="stylesheet" href="./styles/ContactStyle2.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Sevillana&display=swap" rel="stylesheet">
+    
+    <!-- Fontawesome icon -->
+    <link rel="stylesheet" href="./styles/navStyle1.css">
+    <link rel="stylesheet" href="./styles/navStyle2.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
+    <nav id="myNav" class="fixed top-0 left-0 h-24 w-full bg-[#ebe7dc] px-8 md:px-32 py-2 flex justify-between items-center" style="z-index: 1000;">
+      <div >
+          <img src="./Assets/Logo.jpg" alt="" class="h-20" > 
+      </div>
+      <div class="md:block hidden">
+          <ul class = "flex justify-around items-center font-semibold text-xl">
+            <li class = "mx-6 cursor-pointer"> <a href="./index.html"> Home</a></li>
+            <li class = "mx-6 cursor-pointer"> <a href="./about.html"> About</a></li>
+            <li class = "mx-6 cursor-pointer"><a href="./contact.html"> Contact Us</a></li>
+          </ul>
+      </div>
+      
+      <div class="block lg:hidden mr-5 menu" onclick="openNav()">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+      </div>
+
+      <div id="mySidebar" class="sidebar">
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+          <a href="./index.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./contact.html">Contact</a>
+        </div>
+  </nav>
+  <script src="./scripts/navScript.js"></script>
+  </head>
+  <body>
+
+    
+    <section class = "contact-section  mt-24">
+      <div class = "contact-bg py-8">
+        <h3 class="mb-8">Get in Touch with Us</h3>
+        <h2>contact us</h2>
+        <div class = "line">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+        <p class = "text text-base mt-5">If you have any suggestions,problems and comments for us please contact us from below.</p>
+      </div>
+
+
+      <div class = "contact-body">
+        <div class = "contact-info">
+          <div>
+            <span><i class = "fas fa-mobile-alt"></i></span>
+            <span>Phone No.</span>
+            <span class = "text">+91-96246 96846</span>
+          </div>
+          <div>
+            <span><i class = "fab fa-instagram"></i></span>
+            <span>Instagram</span>
+            <span class = "text">@koethekafe</span>
+          </div>
+          <div>
+            <span><i class = "fas fa-map-marker-alt"></i></span>
+            <span>Address</span>
+            <span class = "text">205, International Finance Centre, VIP Road, opp. Fire Station, Vesu, Surat, Gujarat 395007</span>
+          </div>
+          <div>
+            <span><i class = "fas fa-clock"></i></span>
+            <span>Opening Hours</span>
+            <span class = "text">Monday - Sunday (12 pm–12:30 am)</span>
+          </div>
+        </div>
+        <div id="feedback" style="height: 5rem;"></div>
+        <div class = "contact-form"  >
+          
+          
+          <form>
+            <h1 class="font-lg text-4xl mb-7 font-serif">Connect with Us!</h1>
+            <div>
+              <input type = "text" class = "form-control" placeholder="First Name">
+              <input type = "text" class = "form-control" placeholder="Last Name">
+            </div>
+            <div>
+              <input type = "email" class = "form-control" placeholder="E-mail">
+              <input type = "text" class = "form-control" placeholder="Phone">
+            </div>
+            <textarea rows = "5" placeholder="Message" class = "form-control"></textarea>
+            <a href="#"><button class="bg-[#bf6030] text-white py-3 px-5 font-semibold mt-5 rounded-full">Send Message</button></a>
+            
+          </form>
+
+          <div>
+            <img src = "image/contact-png.png" alt = "" class="md:ml-10">
+          </div>
+        </div>
+      </div>
+
+      <div class = "map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.2735436899716!2d72.77846137525975!3d21.141509580536162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be05327ccb9c45f%3A0xe73ce99228e97293!2sKOE%20-%20The%20Kafe!5e0!3m2!1sen!2sin!4v1704180527056!5m2!1sen!2sin" width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+      </div>
+
+      <!-- footer -->
+      <div class="bg-[#f4f1ea] mx-0 mb-0 px-10 py-16 flex flex-wrap justify-between items-center gap-10">
+        <div class="w-64">
+          <h1 class="font-bold text-lg">
+            KOE - The Kafe
+            <br><br>
+          </h1>
+          <p class="text-gray-600">
+            <span class="font-semibold text-gray-800">Cafe Locations:</span> <br>
+            205, International Finance Centre, VIP Road, opp. Fire Station, Vesu, Surat, Gujarat 395007
+          </p>
+          <br>
+          <h1 class="font-semibold text-gray-800">
+            Cafe Timings:
+          </h1>
+          <p class="text-gray-600">
+            12 pm–12:30 am
+          </p>
+        </div>
+  
+  
+        <div class="w-64 flex flex-col gap-3 text-gray-700">
+              
+          <p class="font-bold text-xl mb-2">Quick Links</p>
+          <p><a href="./index.html">Home</a></p>
+          <p><a href="https://bit.ly/KoeTheKafeMenu">Menu</a></p>
+          <p><a href="./about.html">About Us</a></p>
+          <p><a href="https://www.instagram.com/koethekafe/">Instagram</a></p>
+        
+      </div>
+
+      <div class="w-64 flex flex-col gap-3 text-gray-700">
+        
+          <p class="font-bold text-xl mb-2">Contact</p>
+          <p><a href="./contact.html">Contact Us</a></p>
+          <p><a href="./contact.html#feedback">Feedback</a></p>
+          <p><a href="./index.html#custReviews">Customer Reviews</a></p>
+          <p><a href="https://maps.app.goo.gl/aGA2JqcXcnLBhWQk8">Locations</a></p>
+        
+      </div>
+        
+        <div class="map">
+          <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.2761322759548!2d72.77937191178164!3d21.141406513462726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be05327ccb9c45f%3A0xe73ce99228e97293!2sKOE%20-%20The%20Kafe!5e0!3m2!1sen!2sin!4v1703932462882!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded-lg w-[250px] h-[224px] md:w-[350px] md:h-[300px]"></iframe>
+        </div>
+      </div>
+
+      <!-- Menu btn -->
+      <a href="https://bit.ly/KoeTheKafeMenu" target="_blank" style="text-decoration: none;" class="text-[#42230f] font-bold text-3xl hover:text-[#4e3c1e] ">
+        <div id="menu" class="fixed bottom-5 right-5 px-4 py-3 bg-[#ebe5d3] hover:bg-[#e4e1d8] rounded-3xl md:rounded-lg flex justify-between items-center gap-5" style="font-family: 'Sevillana', cursive;">
+          <img src="./Assets/menu.png" alt="" class="h-10 w-10">
+          <div class="hidden md:block"> Menu </div>
+        </div>
+        </a>
+    </section>
+    
+    
+
+  </body>
+</html>
