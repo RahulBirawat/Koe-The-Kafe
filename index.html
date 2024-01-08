@@ -20,13 +20,14 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Sevillana&display=swap" rel="stylesheet">
 
+
+    <script src="./CSS Files/JS Files/navigation.js"></script>
     <style>
       html,body{
         overflow-x: hidden;
         overflow-y: auto;
       }
     </style>
-    <script src="./CSS Files/JS Files/navigation.js"></script>
 </head>
 
 <body>
@@ -41,7 +42,7 @@
         </div>
 
         <!-- Navigation Bar -->
-        <nav id="myNav" class="h-24 w-full bg-[#ebe7dc] px-8 md:px-32 py-2 flex justify-between items-center" style="position: sticky;top:0px;z-index: 500;">
+        <nav id="myNav" class="h-24 w-full bg-[#ebe7dc] px-8 md:px-32 py-2 flex justify-between items-center" style="position:sticky;top:0px;z-index: 500;">
             <div>
                 <img src="./CSS Files/Images/Logo.jpg" alt="" class="h-20">
             </div>
@@ -152,11 +153,7 @@
               <h1 class="text-center  pt-3" style="font-family: 'Poppins', sans-serif;font-family: 'Sevillana', cursive;font-size: 36px;">Coffee</h1>
             </div> 
          </div>
-         
-
-        </div>
-
-        <dialog  id="modal1" class="modal relative " style="color: antiquewhite; background-image: linear-gradient(rgba(0, 0, 0, 0.658),rgba(46, 31, 0, 0.764)),url('./Assets/breadbg.jpg');">
+         <dialog  id="modal1" class="modal relative " style="color: antiquewhite; background-image: linear-gradient(rgba(0, 0, 0, 0.658),rgba(46, 31, 0, 0.764)),url('./Assets/breadbg.jpg');">
           <h1 class="text-center" style="font-family: 'Poppins', sans-serif;font-family: 'Sevillana', cursive;font-weight: 500;font-size: 3.25rem;line-height: 3rem;">Breads</h1>
           <div class="closeModal1 " style="cursor: pointer;position: absolute; top:30px ; right: 30px;"> &#10006;</div>
           <br>
@@ -324,6 +321,10 @@
           
         </dialog> 
 
+        </div>
+
+        
+
         <!-- Insta Section -->
         <div id="insta" class="bg-white ">
           <div id="instaProfile" class=" py-5 flex flex-wrap flex-row justify-center items-center gap-x-12 gap-y-5">
@@ -382,7 +383,7 @@
 
 
         <!-- TestMonial Section -->
-        <h1 class="text-center font-medium pt-3 text-6xl " style="font-family: 'Poppins', sans-serif;font-family: 'Sevillana', cursive;">Customer Testimonials</h1>
+        <h1 id="custReviews" class="text-center font-medium pt-3 text-6xl " style="font-family: 'Poppins', sans-serif;font-family: 'Sevillana', cursive;">Customer Testimonials</h1>
         <div class="testimonial" >
             <section class="Ccontainer">
                 <div class="testimonial mySwiper">
@@ -390,49 +391,40 @@
                     <div class="slide swiper-slide">
                       <img src="./Assets/img1.jpg" alt="" class="image" />
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
-                        saepe provident dolorem a quaerat quo error facere nihil deleniti
-                        eligendi ipsum adipisci, fugit, architecto amet asperiores
-                        doloremque deserunt eum nemo.
+                        Quite honestly refreshing coffee and coffee mocktails! Love that they make everything from scratch, their pizza bases, pasta and coffee! Service and food on point. ✨
                       </p>
           
                       <i class="bx bxs-quote-alt-left quote-icon"></i>
           
                       <div class="details">
-                        <span class="name">Marnie Lotter</span>
-                        <span class="job">Web Developer</span>
+                        <span class="name">Miltali Semlani</span>
+                        
                       </div>
                     </div>
                     <div class="slide swiper-slide">
                       <img src="./Assets/img2.jpg" alt="" class="image" />
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
-                        saepe provident dolorem a quaerat quo error facere nihil deleniti
-                        eligendi ipsum adipisci, fugit, architecto amet asperiores
-                        doloremque deserunt eum nemo.
+                        I loved the ambience of the place and the food was so good. Even the service given was amazing when I went with my friends
                       </p>
           
                       <i class="bx bxs-quote-alt-left quote-icon"></i>
           
                       <div class="details">
-                        <span class="name">Marnie Lotter</span>
-                        <span class="job">Web Developer</span>
+                        <span class="name">Advika Goenka</span>
+                        
                       </div>
                     </div>
                     <div class="slide swiper-slide">
                       <img src="./Assets/img3.jpg" alt="" class="image" />
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam,
-                        saepe provident dolorem a quaerat quo error facere nihil deleniti
-                        eligendi ipsum adipisci, fugit, architecto amet asperiores
-                        doloremque deserunt eum nemo.
+                        Great Ambience; Amazing food.
+                        We needed something out of the menu, a little this and little that, the host “Dhruv” happily obliged. Do visit.
                       </p>
           
                       <i class="bx bxs-quote-alt-left quote-icon"></i>
           
                       <div class="details">
-                        <span class="name">Marnie Lotter</span>
-                        <span class="job">Web Developer</span>
+                        <span class="name">Anish Agarwal</span>
                       </div>
                     </div>
                   </div>
@@ -467,20 +459,20 @@
             <div class="w-64 flex flex-col gap-3 text-gray-700">
               
                 <p class="font-bold text-xl mb-2">Quick Links</p>
-                <p>Home</p>
-                <p>Menu</p>
-                <p>About Us</p>
-                <p>Instagram</p>
+                <p><a href="./index.html">Home</a></p>
+                <p><a href="https://bit.ly/KoeTheKafeMenu">Menu</a></p>
+                <p><a href="./about.html">About Us</a></p>
+                <p><a href="https://www.instagram.com/koethekafe/">Instagram</a></p>
               
             </div>
       
             <div class="w-64 flex flex-col gap-3 text-gray-700">
               
                 <p class="font-bold text-xl mb-2">Contact</p>
-                <p>Contact Us</p>
-                <p>Feedback</p>
-                <p>Customer Reviews</p>
-                <p>Locations</p>
+                <p><a href="./contact.html">Contact Us</a></p>
+                <p><a href="./contact.html#feedback">Feedback</a></p>
+                <p><a href="#custReviews">Customer Reviews</a></p>
+                <p><a href="https://maps.app.goo.gl/aGA2JqcXcnLBhWQk8">Locations</a></p>
               
             </div>
             
