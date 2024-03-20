@@ -7,12 +7,32 @@
     <title>Koe - The Kafe</title>
     <link rel="icon" href="./CSS Files/Images/cafe.png">
     <link rel="stylesheet" href="./CSS Files/index.css">
+    <link rel="stylesheet" href="./CSS Files/footerStyle.css">
+    <link rel="stylesheet" href="./styles/InstaStyle.css">
+    <link rel="stylesheet" href="./styles/modalStyles.css">
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="./CSS Files/swiper-bundle.min.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./CSS Files/testostyle.css" />
+    <!-- googleFonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Sevillana&display=swap" rel="stylesheet">
+
+
     <script src="./CSS Files/JS Files/navigation.js"></script>
+    <style>
+      html,body{
+        overflow-x: hidden;
+        overflow-y: auto;
+      }
+    </style>
 </head>
 
 <body>
 
-    <div class="preloader"></div>
+    <div class="preloader" style="z-index:10005"></div>
 
     <div class="container">
 
@@ -22,15 +42,15 @@
         </div>
 
         <!-- Navigation Bar -->
-        <nav id="myNav" class="h-24 w-full bg-[#ebe7dc] px-8 md:px-32 py-2 flex justify-between items-center">
+        <nav id="myNav" class="fixed top-0 left-0 z-1000 h-24 w-full bg-[#ebe7dc] px-8 md:px-32 py-2 flex justify-between items-center" style="z-index:10000;">
             <div>
                 <img src="./CSS Files/Images/Logo.jpg" alt="" class="h-20">
             </div>
             <div class="md:block hidden">
                 <ul class="flex justify-around items-center font-semibold text-xl">
-                    <li class="mx-6 cursor-pointer">Home</li>
-                    <li class="mx-6 cursor-pointer">About</li>
-                    <li class="mx-6 cursor-pointer">Contact Us</li>
+                  <li class = "mx-6 cursor-pointer"> <a href="./index.html"> Home</a></li>
+                  <li class = "mx-6 cursor-pointer"> <a href="./about.html"> About</a></li>
+                  <li class = "mx-6 cursor-pointer"><a href="./contact.html"> Contact Us</a></li>
                 </ul>
             </div>
 
@@ -40,18 +60,16 @@
                 <div class="bar3"></div>
             </div>
 
-            <div id="mySidebar" class="sidebar">
+            <div id="mySidebar" class="sidebar" style="z-index: 100;">
                 <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Contact</a>
+                <a href="./index.html">Home</a>
+                <a href="./about.html">About</a>
+                <a href="./contact.html">Contact</a>
             </div>
         </nav>
 
-        <h2 id="heading">Get Your Subsciption Now!</h2>
-
         <!-- Hero Section -->
-        <div class="hero"></div>
+        <div class="hero" style="margin-top:5.6rem;"></div>
 
         <!-- Hero Section 2 -->
         <div class="hero_sec2">
@@ -73,124 +91,408 @@
             </div>
         </div>
 
-        <!-- TestMonial Section -->
-        <div class="testimonials">
-            <div class="headings">
-                <div class="heading-text">
-                    <h2>What Customer Says</h2>
-                    <h1>Recent Reviews</h1>
-                </div>
-                <div class="arrows">
-                    <button onclick="moveLeft()"><img id="btn1" src="./CSS Files/Images/left-arrow.png" alt=""></button>
-                    <button onclick="moveRight()"><img src="./CSS Files/Images/right-arrow.png" alt=""></button>
-                </div>
-            </div>
-
-            <div class="testboxes">
-                <!-- Box1 -->
-                <div class="testbox" id="box1">
-                    <div class="para">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptates vitae soluta quod
-                            natus harum reiciendis eius magni?</p>
-                    </div>
-                    <div class="user-section">
-                        <img src="./CSS Files/Images/testuser.webp" alt="">
-                        <h2>Aniruddh</h2>
-                    </div>
-                </div>
-                <!-- Box2 -->
-                <div class="testbox" id="box2">
-                    <div class="para">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptates vitae soluta quod
-                            natus harum reiciendis eius magni?</p>
-                    </div>
-                    <div class="user-section">
-                        <img src="./CSS Files/Images/testuser.webp" alt="">
-                        <h2>Rahul Jain</h2>
-                    </div>
-                </div>
-                <!-- Box3 -->
-                <div class="testbox" id="box3">
-                    <div class="para">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptates vitae soluta quod
-                            natus harum reiciendis eius magni?</p>
-                    </div>
-                    <div class="user-section">
-                        <img src="./CSS Files/Images/testuser.webp" alt="">
-                        <h2>Abhinav</h2>
-                    </div>
-                </div>
-                <!-- Box4 -->
-                <div class="testbox" id="box4">
-                    <div class="para">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste voluptates vitae soluta quod
-                            natus harum reiciendis eius magni?</p>
-                    </div>
-                    <div class="user-section">
-                        <img src="./CSS Files/Images/testuser.webp" alt="">
-                        <h2>Nikhil</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-
         <!-- WorkShop Section -->
 
         <div class="workshop">
             <div class="work_image">
                 <!-- <img src="./CSS Files/Images/Screenshot (343).png" alt=""> -->
-                <video src="./CSS Files/Images/WhatsApp Video 2023-12-29 at 20.25.29.mp4" controls></video>
+                <video muted loop autoplay>
+                    <source src="./CSS Files/Images/WhatsApp Video 2023-12-29 at 20.25.29.mp4" type="video/mp4">
+                </video>
             </div>
             <div class="text_section">
                 <h2>Join the workshop of Coffee Roasting</h2>
                 <h1>WorkShop Starts in: </h1>
-                <p id="timer"></p>
+                <div id="timer">
+                    <div  class="timeBox">
+                        <div id="day"></div>
+                        <div>Days</div>
+                    </div>
+                    <div  class="timeBox">
+                        <div id="hour"></div>
+                        <div>Hours</div>
+                    </div>
+                    <div  class="timeBox">
+                        <div id="min"></div>
+                        <div>Mins</div>
+                    </div>
+                    <div class="timeBox">
+                        <div id="sec"></div>
+                        <div>Secs</div>
+                    </div>
+                </div>
                 <button>Register Now</button>
             </div>
         </div>
+        
+        <!-- Specialities Section -->
+        <div >
+            
+          <h1 class="text-center font-medium pt-3 text-6xl " style="font-family: 'Poppins', sans-serif;font-family: 'Sevillana', cursive;margin-bottom: 40px;">A few of our Favourites...</h1>
+         <div class="flex justify-around items-center flex-row flex-wrap mt-5 mx-24" style="gap:48px">
+            
+            <div>
+              
+              <div class="bread h-72 w-72 md:h-80 md:w-80 bg-slate-200 rounded-full flex justify-center items-center">
+                <img src="./Assets/bread1.png" alt="bread" class="h-64 hover:h-72 md:h-72 md:hover:h-80" style="transition: all 400ms; border-radius: 100%;">
+              </div>
+              <h1 class="text-center pt-3" style="font-family: 'Poppins', sans-serif;font-family: 'Sevillana', cursive;font-size: 36px;">Breads</h1>
+            </div>
+            <div>
+              <div class="cheese h-72 w-72 md:h-80 md:w-80 bg-slate-200 rounded-full flex justify-center items-center">
+                <img src="./Assets/cheese.jpg" alt="mocktail" class="h-64 hover:h-72 md:h-72 md:hover:h-80 " style="transition: all 400ms; border-radius: 100%;">
+              </div>
+              <h1 class="text-center pt-3" style="font-family: 'Poppins', sans-serif;font-family: 'Sevillana', cursive;font-size: 36px;">Cheese</h1>
+            </div>
+            <div>
+              <div class="coffee h-72 w-72 md:h-80 md:w-80 bg-orange-100 rounded-full flex justify-center items-center">
+                <img src="./Assets/coffeeImg.png" alt="bread" class="h-52 hover:h-60  md:h-60 md:hover:h-64" style="transition: all 400ms;">
+              </div>
+              <h1 class="text-center  pt-3" style="font-family: 'Poppins', sans-serif;font-family: 'Sevillana', cursive;font-size: 36px;">Coffee</h1>
+            </div> 
+         </div>
+         <dialog  id="modal1" class="modal relative " style="color: antiquewhite; background-image: linear-gradient(rgba(0, 0, 0, 0.658),rgba(46, 31, 0, 0.764)),url('./Assets/breadbg.jpg');">
+          <h1 class="text-center" style="font-family: 'Poppins', sans-serif;font-family: 'Sevillana', cursive;font-weight: 500;font-size: 3.25rem;line-height: 3rem;">Breads</h1>
+          <div class="closeModal1 " style="cursor: pointer;position: absolute; top:30px ; right: 30px;"> &#10006;</div>
+          <br>
+          <div>
+            <p>
+              <b> Sourdough: </b> <br>
+              Fermented with naturally occurring wild yeast.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Baguette: </b> <br>
+              A long, thin French bread with a crispy crust.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Ciabatta: </b> <br>
+              An Italian bread known for its chewy texture and porous interior.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Focaccia: </b> <br>
+              An Italian flatbread often topped with herbs and olive oil.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Whole Wheat: </b> <br>
+              Made with whole wheat flour, offering a nuttier taste and more nutrients.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Brioche: </b> <br>
+              A rich, sweet bread enriched with butter
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> croissants : </b> <br>
+              Croissants are a flaky and buttery French pastry. They're made by layering butter and dough, then folding and rolling several times to create a delicate, crescent-shaped pastry.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Pita: </b> <br>
+              A round, pocketed flatbread, common in Middle Eastern cuisine.
+            </p>
+          </div>
+        </dialog> 
+       
+        <dialog  id="modal2" class="modal relative " style="color: antiquewhite; background-image: linear-gradient(rgba(0, 0, 0, 0.558),rgba(46, 31, 0, 0.764)),url('./Assets/cheeseBg.jpg');">
+          <h1 class="text-center" style="font-family: 'Poppins', sans-serif;font-family: 'Sevillana', cursive;font-weight: 500;font-size: 3.25rem;line-height: 3rem;">Cheeses</h1>
+          <p class="closeModal2 " style="cursor: pointer;position: absolute; top:30px ; right: 30px;"> &#10006;</p>
+          <div>
+            <p>
+              <b> Baby Burrata: </b> <br>
+              A small, fresh Italian cheese made from mozzarella and cream. It has a soft, creamy center encased in a delicate outer shell.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Cherry Broccolini: </b> <br>
+              While "Cherry Broccolini" is not a standard cheese, if you meant a specific cheese related to cherry and broccolini flavors, it might be a unique or local variation.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Buffalo Mozzarella: </b> <br>
+              A soft, moist Italian cheese made from buffalo milk. It has a delicate, milky flavor and is often used in salads or paired with tomatoes.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Cheddar: </b> <br>
+              A firm, smooth-textured cheese originating from England. Cheddar ranges from mild to sharp in flavor, with a distinct tanginess.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Mozzarella: </b> <br>
+              A mild, white cheese known for its soft texture and excellent melting properties. It's often used in pizzas, salads, and Italian dishes.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Mascarpone: </b> <br>
+              An Italian cream cheese with a velvety texture. It's sweet and buttery, commonly used in desserts like tiramisu.
+    
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Parmesan : </b> <br>
+              A hard, aged Italian cheese with a granular texture and rich, savory flavor. Often grated and used to enhance the taste of various dishes.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Feta: </b> <br>
+              A crumbly Greek cheese made from sheep's or goat's milk. It has a tangy flavor and is often used in salads and Mediterranean cuisine.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Ricotta: </b> <br>
+              An Italian whey cheese with a smooth, slightly grainy texture. It's versatile, used in both sweet and savory.
+            </p>
+          </div>
+        </dialog> 
+       
+        <dialog  id="modal3" class="modal relative " style="color: antiquewhite; background-image: linear-gradient(rgba(0, 0, 0, 0.696),rgba(46, 31, 0, 0.836)),url('./Assets/coffeebg1.jpg');background-size: cover;">
+          <h1 class="text-center" style="font-family: 'Poppins', sans-serif;font-family: 'Sevillana', cursive;font-weight: 500;font-size: 3.25rem;line-height: 3rem;">Coffee</h1>
+          <p class="closeModal3 " style="cursor: pointer;position: absolute; top:30px ; right: 30px;"> &#10006;</p>
+          <div>
+            <p>
+              <b> Espresso Italiano: </b> <br>
+              Strong and concentrated coffee brewed by forcing hot water through finely-ground coffee beans.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Espresso Americano: </b> <br>
+              Diluted espresso with added hot water for a milder flavor, resembling regular drip coffee.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Cappuccino </b> <br>
+              Equal parts espresso, steamed milk, and milk foam, creating a creamy and frothy coffee beverage.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Macchiato: </b> <br>
+              Espresso "stained" with a small amount of milk, resulting in a bolder coffee flavor.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Iced Aeropress: </b> <br>
+              Coffee brewed using the Aeropress method and served over ice for a cold and smooth taste.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Classic Cold Brew: </b> <br>
+              Coffee brewed with cold water over an extended period, resulting in a smooth and less acidic flavor.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Caramel Iced Latte : </b> <br>
+              Espresso mixed with milk, ice, and caramel syrup, offering a sweet and creamy iced coffee.
+            </p>
+          </div>
+          <div>
+            <p>
+              <b> Swiss Mocha Frappe: </b> <br>
+              Blended beverage featuring mocha-flavored coffee, milk, ice, and sometimes whipped cream, for a satisfying frozen treat.
+            </p>
+          </div>
+          
+        </dialog> 
 
-        <!-- Footer Section -->
-        <div class="footer">
-            <div class="sec1">
-                <h2>Company</h2>
-                <div class="anchors">
-                    <a href="./about.html">About us</a>
-                    <a href="">Team</a>
-                    <a href="">Careers</a>
-                    <a href="">FAQs</a>
+        </div>
+
+        
+
+        <!-- Insta Section -->
+        <div id="insta" class="bg-white ">
+          <div id="instaProfile" class=" py-5 flex flex-wrap flex-row justify-center items-center gap-x-12 gap-y-5">
+            <div>
+              <a href="https://www.instagram.com/koethekafe/">
+                <div class="h-16 w-16 flex justify-center items-center rounded-full" style="background: linear-gradient(40deg,#f99b4a 15%,#dd3071 50%,#c72e8d 85%);">
+                  <img src="./Assets/instaProfile.jpg" alt="" class="h-[60px] w-[60px] rounded-full" >
                 </div>
+              </a>
             </div>
-            <div class="sec2">
-                <h2>Contact</h2>
-                <div class="anchors">
-                    <a href="">Contact us</a>
-                    <a href="">Feedback</a>
-                    <a href="">Help & Support</a>
-                    <a href="">Customer's Reviews</a>
+            
+            <div class="flex justify-center items-start flex-col">
+              <h1 class="font-bold text-lg leading-3 mb-3">KOE - The Kafe</h1>
+              <div class="text-base text-gray-500 leading-3">@koethekafe</div>
+            </div>
+  
+            <div>
+              <a href="https://www.instagram.com/koethekafe/" style="text-decoration: none;">
+                <div class="md:ml-10 flex gap-4 justify-center items-center py-1 px-2 rounded-lg" style="background: linear-gradient(40deg,#f99b4a 15%,#dd3071 50%,#c72e8d 85%);">
+                  <img src="./Assets/instagramLogo.png" alt="" class="h-4 w-4">
+                  <div class="text-white">Follow</div>
                 </div>
+              </a>
             </div>
-            <div class="sec3">
-                <h2>Legal</h2>
-                <div class="anchors">
-                    <a href="">Privacy Policy</a>
-                    <a href="">Refund Policy</a>
-                    <a href="">Terms and Conditions</a>
-                    <a href="">Offer Terms</a>
+            
+  
+          </div>
+  
+          <div id="instaPosts" class="flex flex-wrap justify-center items-center">
+              <div class="flex flex-row">
+                <div class="hoverBg">
+                  <a href="https://www.instagram.com/reel/C1ACBzPNaZ8/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+                    <div class="instaPic" style="background-image: url('./Assets/instaPost1.jpg');"></div>
+                  </a>
                 </div>
-            </div>
-            <div class="sec4">
-                <a href=""><img src="./CSS Files/Images/google-play.png" alt="">Get it on Google Play</a>
-                <a href=""><img src="./CSS Files/Images/app-store.png" alt="">Get it on Apple Store</a>
-            </div>
+                <div>
+                  <a href="https://www.instagram.com/reel/C1OY3c_NB4Y/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+                    <div class="instaPic" style="background-image: url('./Assets/instaPost2.jpg');"></div>
+                  </a>
+                </div>
+              </div>
+              <div class="flex flex-row">
+                <div>
+                  <a href="https://www.instagram.com/p/Cz6Y0qvNjOz/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+                    <div class="instaPic" style="background-image: url('./Assets/instaPost3.jpg');"></div>
+                  </a>
+                </div>
+                <div>
+                  <a href="https://www.instagram.com/reel/Cx88s02NcDc/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==">
+                    <div class="instaPic" style="background-image: url('./Assets/instaPost4.jpg');"></div>
+                  </a>
+                </div>
+              </div>
+          </div>
         </div>
 
 
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/GCPMx3L6zHE?si=cCtu7iC-MrOxNQ2_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <!-- TestMonial Section -->
+        <h1 id="custReviews" class="text-center font-medium pt-3 text-6xl " style="font-family: 'Poppins', sans-serif;font-family: 'Sevillana', cursive;">Customer Testimonials</h1>
+        <div class="testimonial" >
+            <section class="Ccontainer">
+                <div class="testimonial mySwiper">
+                  <div class="testi-content swiper-wrapper">
+                    <div class="slide swiper-slide">
+                      <img src="./Assets/img1.jpg" alt="" class="image" />
+                      <p>
+                        Quite honestly refreshing coffee and coffee mocktails! Love that they make everything from scratch, their pizza bases, pasta and coffee! Service and food on point. ✨
+                      </p>
+          
+                      <i class="bx bxs-quote-alt-left quote-icon"></i>
+          
+                      <div class="details">
+                        <span class="name">Miltali Semlani</span>
+                        
+                      </div>
+                    </div>
+                    <div class="slide swiper-slide">
+                      <img src="./Assets/img2.jpg" alt="" class="image" />
+                      <p>
+                        I loved the ambience of the place and the food was so good. Even the service given was amazing when I went with my friends
+                      </p>
+          
+                      <i class="bx bxs-quote-alt-left quote-icon"></i>
+          
+                      <div class="details">
+                        <span class="name">Advika Goenka</span>
+                        
+                      </div>
+                    </div>
+                    <div class="slide swiper-slide">
+                      <img src="./Assets/img3.jpg" alt="" class="image" />
+                      <p>
+                        Great Ambience; Amazing food.
+                        We needed something out of the menu, a little this and little that, the host “Dhruv” happily obliged. Do visit.
+                      </p>
+          
+                      <i class="bx bxs-quote-alt-left quote-icon"></i>
+          
+                      <div class="details">
+                        <span class="name">Anish Agarwal</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-button-next nav-btn"></div>
+                  <div class="swiper-button-prev nav-btn"></div>
+                  <div class="swiper-pagination"></div>
+                </div>
+              </section>
+          
+        </div>
+        <!-- Footer Section -->
+        <div class="bg-[#f4f1ea] mt-16 mx-0 mb-0 px-10 py-16 flex flex-wrap justify-between items-center gap-10">
+            <div class="w-64">
+              <h1 class="font-bold text-lg">
+                KOE - The Kafe
+                <br><br>
+              </h1>
+              <p class="text-gray-600">
+                <span class="font-semibold text-gray-800">Cafe Locations:</span> <br>
+                205, International Finance Centre, VIP Road, opp. Fire Station, Vesu, Surat, Gujarat 395007
+              </p>
+              <br>
+              <h1 class="font-semibold text-gray-800">
+                Cafe Timings:
+              </h1>
+              <p class="text-gray-600">
+                12 pm–12:30 am
+              </p>
+            </div>
+      
+      
+            <div class="w-64 flex flex-col gap-3 text-gray-700">
+              
+                <p class="font-bold text-xl mb-2">Quick Links</p>
+                <p><a href="./index.html">Home</a></p>
+                <p><a href="https://bit.ly/KoeTheKafeMenu">Menu</a></p>
+                <p><a href="./about.html">About Us</a></p>
+                <p><a href="https://www.instagram.com/koethekafe/">Instagram</a></p>
+              
+            </div>
+      
+            <div class="w-64 flex flex-col gap-3 text-gray-700">
+              
+                <p class="font-bold text-xl mb-2">Contact</p>
+                <p><a href="./contact.html">Contact Us</a></p>
+                <p><a href="./contact.html#feedback">Feedback</a></p>
+                <p><a href="#custReviews">Customer Reviews</a></p>
+                <p><a href="https://maps.app.goo.gl/aGA2JqcXcnLBhWQk8">Locations</a></p>
+              
+            </div>
+            
+            <div class="map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.2761322759548!2d72.77937191178164!3d21.141406513462726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be05327ccb9c45f%3A0xe73ce99228e97293!2sKOE%20-%20The%20Kafe!5e0!3m2!1sen!2sin!4v1703932462882!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded-lg w-[250px] h-[224px] md:w-[350px] md:h-[300px]"></iframe>
+            </div>
+          </div>
+        
+        <a href="https://bit.ly/KoeTheKafeMenu" target="_blank" style="text-decoration: none;" class="text-[#42230f] font-bold text-3xl hover:text-[#4e3c1e] ">
+            <div id="menu" class="fixed bottom-5 right-5 px-4 py-3 bg-[#ebe7dc] hover:bg-[#e4e1d8] rounded-3xl md:rounded-lg flex justify-between items-center gap-5" style="font-family: 'Poppins', sans-serif;font-family: 'Sevillana', cursive;z-index: 1000;">
+              <img src="./Assets/menu.png" alt="" class="h-10 w-10">
+              <div class="hidden md:block"> Menu </div>
+            </div>
+            </a>
+
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/GCPMx3L6zHE?si=cCtu7iC-MrOxNQ2_" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen id="hiddenIframe"></iframe>
         
     </div>
 
-
-
+    <script src="./Scripts/swiper-bundle.min.js"></script>
+    <script src="./Scripts/testoscript.js"></script>
+    <script src="./Scripts/modalScripts.js"></script>
     <script>
         let currIndex = 0;
         let test_boxes = document.querySelectorAll(".testboxes .testbox");
@@ -221,7 +523,10 @@
             let today_date = new Date().getTime();
 
             let diff = dest_date - today_date;
-
+            let d=document.getElementById("day");
+            let h=document.getElementById("hour");
+            let m=document.getElementById("min");
+            let s=document.getElementById("sec");
 
             let days = Math.floor(diff / (1000 * 86400));
 
@@ -230,8 +535,12 @@
             let minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
 
             let seconds = Math.floor((diff % (1000 * 60)) / 1000);
+            d.innerHTML = days;
+            h.innerHTML = hours;
+            m.innerHTML = minutes;
+            s.innerHTML = seconds;
 
-            para.innerHTML = days + " Days " + hours + " Hrs " + minutes + " Min  " + seconds + " Sec ";
+            // para.innerHTML = days + " Days " + hours + " Hrs " + minutes + " Min  " + seconds + " Sec ";
 
         }, 1000);
 

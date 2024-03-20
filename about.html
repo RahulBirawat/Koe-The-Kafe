@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Koe The Cafe</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&family=Sevillana&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles/navStyle1.css">
+    <link rel="stylesheet" href="./styles/navStyle2.css">
+    <link rel="stylesheet" href="./styles/aboutStyle.css">
+    <link rel="stylesheet" href="./styles/footerStyle.css">
+   <!-- fonts -->
+    
+
+</head>
+<body class=" w-full bg-cover bg-fixed bg-repeat mx-0 px-0" style="background-image: url('./Assets/bg-victorian.jpg'); ">
+    <nav id="myNav" class="fixed top-0 left-0 z-1000 h-24 w-full bg-[#ebe7dc] px-8 md:px-32 py-2 flex justify-between items-center">
+        <div >
+            <img src="./Assets/Logo.jpg" alt="" class="h-20" > 
+        </div>
+        <div class="md:block hidden">
+            <ul class = "flex justify-around items-center font-semibold text-xl">
+                <li class = "mx-6 cursor-pointer"> <a href="./index.html"> Home</a></li>
+                <li class = "mx-6 cursor-pointer"> <a href="./about.html"> About</a></li>
+                <li class = "mx-6 cursor-pointer"><a href="./contact.html"> Contact Us</a></li>
+            </ul>
+        </div>
+        
+        <div class="block lg:hidden mr-5 menu" onclick="openNav()">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
+        </div>
+
+        <div id="mySidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+            <a href="./index.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./contact.html">Contact</a>
+          </div>
+    </nav>
+
+    <!-- Rest all the work should be done inside main section -->
+    <div id="main" class="p-0 md:mt-32 ">
+        
+          <div id="section1" class="flex flex-wrap gap-16 md:gap-52 md:flex-row flex-col- justify-center md:justify-between items-center md:mx-24 mx-5 text-center">
+            <div class="mt-16 mx-auto md:w-[600px] bg-white px-5 md:px-28 py-12 rounded-xl " style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+              <h1 class="font-medium text-5xl md:text-6xl" style="font-family: 'Poppins', sans-serif;font-family: 'Sevillana', cursive;">About Us</h1>
+              <br>
+              <p class="text-lg md:text-xl font-serif">Welcome to Koe - The Kafe, Surat's only Cafe with in-house coffee roasting machine and Indulge in the essence of premium coffee. Koe has an Indoor cafe as well as Outdoor Rooftop cafe for beautiful evenings. Elevate your experience with our freshly baked delights, premium cheeses, and authentic continental flavors.</p>
+            </div>
+            <div id="pic1" class="relative md:right-28 mt-16 -z-10">
+              <img src="./Assets/roastingMachine.jpg" alt="" class="h-80 md:h-96 rounded-2xl">
+              <img src="./Assets/roastingCoffee.jpg" alt="" class="h-36 md:h-44 rounded-3xl absolute bottom-[-80px] right-[-50px] scale-100">
+              <img src="./Assets/roastedCoffee.jpg" alt="" class="h-36 md:h-44 rounded-3xl absolute top-[-80px] left-[-50px] scale-100">
+            </div>
+          </div>
+          <div id="section2" class="flex justify-between items-center md:mx-24 mx-5 mt-24 gap-16 flex-wrap md:flex-row flex-col-reverse text-center">
+            <div id="pic2" class="relative mt-16 md:ml-36 -z-10">
+              <img src="./Assets/christmasfood.jpg" alt="" class=" h-80 md:h-96 rounded-2xl">
+              <img src="./Assets/christmasfood2.jpg" alt="" class="h-36 md:h-44 rounded-3xl absolute bottom-[-80px] right-[-50px] scale-100">
+              <img src=" ./Assets/diwalifood.jpg" alt="" class="h-36 md:h-44 rounded-3xl absolute top-[-80px] left-[-50px] scale-100">
+            </div>
+            <div class="mt-16 md:w-[600px] bg-white px-5 md:px-28 py-12 rounded-xl " style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+              <h1 class="font-medium text-5xl md:text-6xl" style="font-family: 'Poppins', sans-serif;font-family: 'Sevillana', cursive;">Our Exclusive Menu</h1>
+              <br>
+              <p class="text-lg md:text-xl font-serif  text-center">Discover the magic of our cafe's extensive menu! Enjoy tasty coffees, freshly baked bread, and premium cheeses. We also offer special menu during festive seasons like Diwali and Christmas. </p>
+            </div>
+            
+          </div>
+          <div id="section3" class="flex flex-wrap gap-16 md:gap-52 md:flex-row flex-col- justify-center md:justify-between items-center md:mx-24 mx-5 mt-20 text-center">
+            <div class="mt-16 md:w-[650px] bg-white px-5 md:px-28 py-12 rounded-xl " style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+              <h1 class="font-medium text-5xl md:text-6xl" style="font-family: 'Poppins', sans-serif;font-family: 'Sevillana', cursive;">Weekends at Koe</h1>
+              <br>
+              <p class="text-lg md:text-xl font-serif text-center">Take a breather, escape the chaos of your week at Koe, and dive into weekends that sparkle with music, dance, and awesome events! Join us for lively evenings where you can relax, have a blast, and catch all the live action during matches via our thrilling live streams. Gather your crew, bring the energy, and let's cheer together for our home team like never before!</p>
+            </div>
+            <div id="pic3" class="relative md:right-28 mt-16 -z-10">
+              <img src="./Assets/eve1.jpg" alt="" class="h-96 rounded-2xl">
+              <img src="./Assets/livescreening.jpg" alt="" class="h-44 rounded-3xl absolute bottom-[-80px] right-[-50px] scale-100">
+              <img src="./Assets/singing.jpg" alt="" class="h-44 rounded-3xl absolute top-[-80px] left-[-50px] scale-100">
+            </div>
+          </div>
+          
+
+          <!-- footer  -->
+          <div class="bg-[#f4f1ea] mt-32 mx-0 mb-0 px-10 py-16 flex flex-wrap justify-between items-center gap-10">
+            <div class="w-64">
+              <h1 class="font-bold text-lg">
+                KOE - The Kafe
+                <br><br>
+              </h1>
+              <p class="text-gray-600">
+                <span class="font-semibold text-gray-800">Cafe Locations:</span> <br>
+                205, International Finance Centre, VIP Road, opp. Fire Station, Vesu, Surat, Gujarat 395007
+              </p>
+              <br>
+              <h1 class="font-semibold text-gray-800">
+                Cafe Timings:
+              </h1>
+              <p class="text-gray-600">
+                12 pm–12:30 am
+              </p>
+            </div>
+      
+      
+            <div class="w-64 flex flex-col gap-3 text-gray-700">
+              
+              <p class="font-bold text-xl mb-2">Quick Links</p>
+              <p><a href="./index.html">Home</a></p>
+              <p><a href="https://bit.ly/KoeTheKafeMenu">Menu</a></p>
+              <p><a href="./about.html">About Us</a></p>
+              <p><a href="https://www.instagram.com/koethekafe/">Instagram</a></p>
+            
+          </div>
+    
+          <div class="w-64 flex flex-col gap-3 text-gray-700">
+            
+              <p class="font-bold text-xl mb-2">Contact</p>
+              <p><a href="./contact.html">Contact Us</a></p>
+              <p><a href="./contact.html#feedback">Feedback</a></p>
+              <p><a href="./index.html#custReviews">Customer Reviews</a></p>
+              <p><a href="https://maps.app.goo.gl/aGA2JqcXcnLBhWQk8">Locations</a></p>
+            
+          </div>
+            
+            <div class="map">
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3721.2761322759548!2d72.77937191178164!3d21.141406513462726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be05327ccb9c45f%3A0xe73ce99228e97293!2sKOE%20-%20The%20Kafe!5e0!3m2!1sen!2sin!4v1703932462882!5m2!1sen!2sin" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="rounded-lg w-[250px] h-[224px] md:w-[350px] md:h-[300px]"></iframe>
+            </div>
+          </div>
+          <!-- Menu button  -->
+          <a href="https://bit.ly/KoeTheKafeMenu" target="_blank" style="text-decoration: none;" class="text-[#42230f] font-bold text-3xl hover:text-[#4e3c1e] ">
+          <div id="menu" class="fixed bottom-5 right-5 px-4 py-3 bg-[#ebe5d3] hover:bg-[#e4e1d8] rounded-3xl md:rounded-lg flex justify-between items-center gap-5" style="font-family: 'Sevillana', cursive;">
+            <img src="./Assets/menu.png" alt="" class="h-10 w-10">
+            <div class="hidden md:block"> Menu </div>
+          </div>
+          </a>
+    </div>
+    
+    
+    <!-- Main body ends here -->
+
+
+    <!-- Nav Js Script -->
+    <script src="./scripts/navScript.js"></script>
+  
+   
+</body>
+</html>
